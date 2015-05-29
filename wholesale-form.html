@@ -180,7 +180,7 @@
 			    var srcVal = $('#contact_source');
 			    var noteVal = $('#contact_question');
 			    noteVal.attr('data-ov', noteVal.val());
-			    noteVal.val(noteVal.val() + ' \n \n \n \n \n \n \n ///// How\'d you hear about DankStop?: ' + srcVal.val());
+			    noteVal.val(noteVal.val() + ' \n \n \n \n \n \n \n ///// HOW\'D YOU HEAR ABOUT DANKSTOP?: \n' + srcVal.val());
 			}
 			addVal();
 		    $.ajax({
@@ -196,7 +196,7 @@
 							var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
 							$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
 							captchaImg.attr('src', '').attr('src', captchaUrl);
-							$('#contact_question').val(noteVal.attr('data-ov'));
+							$('#contact_question').val($('#contact_question').attr('data-ov'));
 						} else if (infoMsg) {
 							var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
 							$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
