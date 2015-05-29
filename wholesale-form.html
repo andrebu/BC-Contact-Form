@@ -128,7 +128,7 @@
 			    <div class="form-right" id="captcha-field">
 					<p class="Warning">Please copy the characters from the image into the text field below. Doing this helps us prevent automated submissions.</p>
 					<img src="http://dankstop.com/captcha.php?1557" alt="img"><br>
-					<input type="text" name="captcha" id="captcha"  placeholder="CAPTCHA text">
+					<input type="text" name="captcha" id="captcha"  placeholder="CAPTCHA text" pattern=".{6,}" required>
 			    </div>
 		    </div>
 		    <div class="form-row submission">
@@ -152,19 +152,23 @@
 	var formUrl = 'http://dankstop.com/pages.php?action=sendContactForm';
 	var captchaImg = $('#captcha-field img');
 	var captchaUrl = 'http://dankstop.com/captcha.php?1557';
-    var emailAddressVal = $('#contact_email').val();
 
 	function formSubmissionAction() {
 		$('#ContactForm').remove();
 		$form.submit(function() {
-/*
+			var emailAddressVal = $('#contact_email').val();
 		    if(emailAddressVal.indexOf('@') == -1 || emailAddressVal.indexOf('.') == -1) {
 		        alert('Please enter a valid email address, such as john@example.com.');
 		        $('#contact_email').focus();
 		        $('#contact_email').select();
-				$('#contact_email')[0].setCustomValidity('Enter a valid email address');
+				//$('#contact_email')[0].setCustomValidity('Enter a valid email address');
 		        return false;
+		    } /*
+else {
+				$('#contact_email')[0].setCustomValidity('');
+				return true;
 		    }
+*/
 		    if($('#contact_question').val() == '') {
 		        alert('You forgot to enter your question/comment.');
 		        $('#contact_question').focus();
@@ -176,13 +180,11 @@
 		        $('#captcha').focus();
 		        return false;
 		    }
-*/
 		    $.ajax({
 				type: "POST",
 				url: formUrl,
 				data: $form.serialize(), 
-				success: function(data)
-					{
+				success: function(data) {
 						$('#ContactForm').hide();
 						var $response = $(data);
 						var errorMsg = $response.find('#error-message').html();
