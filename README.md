@@ -40,6 +40,8 @@ BigCommerce Contact Form
 - [Refresh image with a new one at the same url](http://stackoverflow.com/questions/1077041/refresh-image-with-a-new-one-at-the-same-url)
 - [jQuery: .replaceWith()](http://api.jquery.com/replacewith/)
 - [Using jQuery replaceWith to replace content of DIV only working first time](http://stackoverflow.com/questions/4995185/using-jquery-replacewith-to-replace-content-of-div-only-working-first-time)
+- [jQuery/Javascript function to clear all the fields of a form](http://stackoverflow.com/questions/6653556/jquery-javascript-function-to-clear-all-the-fields-of-a-form)
+- []()
 - []()
 
 
