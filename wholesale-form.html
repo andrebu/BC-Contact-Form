@@ -79,7 +79,7 @@
 			        <label for="contact_phone"><span class="fa fa-phone"> Phone Number:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="tel" name="contact_phone" id="contact_phone" placeholder="enter a contact phone number" required>
+				    <input type="tel" name="contact_phone" id="contact_phone" placeholder="enter a contact phone number" pattern=".{10,}" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -87,7 +87,7 @@
 			        <label for="contact_orderno"><span class="fa fa-gavel"> Tax ID:</span></label>
 			    </div>
 			    <div class="form-right">
-				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="enter the Tax ID" required>
+				    <input type="text" name="contact_orderno" id="contact_orderno" placeholder="enter the Tax ID" pattern=".{9,}" required>
 			    </div>
 		    </div>
 		    <div class="form-row">
@@ -162,11 +162,13 @@
 		        alert('Please enter a valid email address, such as john@example.com.');
 		        $('#contact_email').focus();
 		        $('#contact_email').select();
+				$('#contact_email')[0].setCustomValidity('Enter a valid email address');
 		        return false;
 		    }
 		    if($('#contact_question').val() == '') {
 		        alert('You forgot to enter your question/comment.');
 		        $('#contact_question').focus();
+				$('#contact_question')[0].setCustomValidity('Enter a question');
 		        return false;
 		    }
 		    if('' == '' && $('#captcha').val() == '') {
