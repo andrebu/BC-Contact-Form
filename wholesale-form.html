@@ -169,7 +169,8 @@
 						captchaImg.attr('src', '').attr('src', captchaUrl);
 					} else if (infoMsg) {
 						var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
-						$formResponse.css("visibility", "visible").addClass('submit-success').html(infoMsg);
+						$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
+						$('#wholesale-form').trigger("reset");
 					}
 				}
 			});
