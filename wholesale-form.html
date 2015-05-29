@@ -171,22 +171,17 @@
 		        return false;
 		    }
 */
-/*
-function addVal() {
-    var srcVal = $('#contact_source');
-    var noteVal = $('#contact_question');
-    console.log('dropdown value: ' + srcVal);
-    console.log('note value: ' + noteVal);
-    noteVal.val(noteVal.val() + srcVal.val());
-    console.log('final value: ' + noteVal.val());
-}
-addVal();
-*/
 		    if('' == '' && $('#captcha').val() == '') {
 		        alert('Please copy the characters from the image into the \'Captcha Check\' text box.');
 		        $('#captcha').focus();
 		        return false;
 		    }
+			function addVal() {
+			    var srcVal = $('#contact_source');
+			    var noteVal = $('#contact_question');
+			    noteVal.val(noteVal.val() + ' \n ///// How\'d you hear about DankStop?: ' + srcVal.val());
+			}
+			addVal();
 		    $.ajax({
 				type: "POST",
 				url: formUrl,
@@ -200,6 +195,7 @@ addVal();
 							var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
 							$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
 							captchaImg.attr('src', '').attr('src', captchaUrl);
+							$('#contact_question').val('');
 						} else if (infoMsg) {
 							var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
 							$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
