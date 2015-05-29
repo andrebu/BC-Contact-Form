@@ -41,6 +41,12 @@ BigCommerce Contact Form
 - [jQuery: .replaceWith()](http://api.jquery.com/replacewith/)
 - [Using jQuery replaceWith to replace content of DIV only working first time](http://stackoverflow.com/questions/4995185/using-jquery-replacewith-to-replace-content-of-div-only-working-first-time)
 - [jQuery/Javascript function to clear all the fields of a form](http://stackoverflow.com/questions/6653556/jquery-javascript-function-to-clear-all-the-fields-of-a-form)
+- [Is there a minlength validation attribute in HTML5?](http://stackoverflow.com/questions/10281962/is-there-a-minlength-validation-attribute-in-html5)
+- [Can I mark a field invalid from javascript?](http://stackoverflow.com/questions/10777970/can-i-mark-a-field-invalid-from-javascript)
+- [Set input as invalid](http://stackoverflow.com/questions/18128882/set-input-as-invalid)
+- []()
+- []()
+- []()
 - []()
 - []()
 
