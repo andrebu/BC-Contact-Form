@@ -108,6 +108,10 @@
 	line-height: 33px;
 	-webkit-font-smoothing: antialiased;
 }
+#wholesale-form-container form textarea {
+	line-height: 1.37;
+	padding: .7em 1em !important;
+}
 #wholesale-form-container form div.selector {
 	padding: 0 !important;
 	border: 0;
@@ -185,9 +189,9 @@
 	min-height: 20px;
 	visibility: hidden;
 }
+#wholesale-form-container #form-response {
+	color: #39B54A;
+}
 #wholesale-form-container #form-response.submit-error {
 	color: red;
-}
-#wholesale-form-container #form-response.submit-success {
-	color: #39B54A;
 }
