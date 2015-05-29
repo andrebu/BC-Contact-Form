@@ -144,7 +144,7 @@
 <script type="text/javascript">
 //<![CDATA[
 	$(document).ready(function(){
-		$('#ContactForm').hide();
+		formSubmissionAction();
     });
 	var $form = $('#wholesale-form');
 	var $formButton = $('#wholesale-form button[type="submit"]');
@@ -152,30 +152,53 @@
 	var formUrl = 'http://dankstop.com/pages.php?action=sendContactForm';
 	var captchaImg = $('#captcha-field img');
 	var captchaUrl = 'http://dankstop.com/captcha.php?1557';
-	$form.submit(function() {
-	    $.ajax({
-			type: "POST",
-			url: formUrl,
-			data: $form.serialize(), 
-			success: function(data)
-				{
-					$('#ContactForm').hide();
-					var $response = $(data);
-					var errorMsg = $response.find('#error-message').html();
-					var infoMsg = $response.find('#info-message').html();
-					if (errorMsg) {
-						var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
-						$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
-						captchaImg.attr('src', '').attr('src', captchaUrl);
-					} else if (infoMsg) {
-						var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
-						$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
-						$('#wholesale-form').trigger("reset");
+    var emailAddressVal = $('#contact_email').val();
+
+	function formSubmissionAction() {
+		$('#ContactForm').remove();
+		$form.submit(function() {
+/*
+		    if(emailAddressVal.indexOf('@') == -1 || emailAddressVal.indexOf('.') == -1) {
+		        alert('Please enter a valid email address, such as john@example.com.');
+		        $('#contact_email').focus();
+		        $('#contact_email').select();
+		        return false;
+		    }
+		    if($('#contact_question').val() == '') {
+		        alert('You forgot to enter your question/comment.');
+		        $('#contact_question').focus();
+		        return false;
+		    }
+		    if('' == '' && $('#captcha').val() == '') {
+		        alert('Please copy the characters from the image into the \'Captcha Check\' text box.');
+		        $('#captcha').focus();
+		        return false;
+		    }
+*/
+		    $.ajax({
+				type: "POST",
+				url: formUrl,
+				data: $form.serialize(), 
+				success: function(data)
+					{
+						$('#ContactForm').hide();
+						var $response = $(data);
+						var errorMsg = $response.find('#error-message').html();
+						var infoMsg = $response.find('#info-message').html();
+						if (errorMsg) {
+							var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
+							$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
+							captchaImg.attr('src', '').attr('src', captchaUrl);
+						} else if (infoMsg) {
+							var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
+							$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
+							$('#wholesale-form').trigger("reset");
+						}
 					}
-				}
-			});
-	    return false; 
-	});
+				});
+		    return false; 
+		});
+	}
 //]]>
 </script></div>
 <!-- END .wholesalePage -->
