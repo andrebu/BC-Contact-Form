@@ -44,9 +44,9 @@ BigCommerce Contact Form
 - [Is there a minlength validation attribute in HTML5?](http://stackoverflow.com/questions/10281962/is-there-a-minlength-validation-attribute-in-html5)
 - [Can I mark a field invalid from javascript?](http://stackoverflow.com/questions/10777970/can-i-mark-a-field-invalid-from-javascript)
 - [Set input as invalid](http://stackoverflow.com/questions/18128882/set-input-as-invalid)
-- []()
-- []()
-- []()
+- [Combine two form input values with jQuery](http://stackoverflow.com/questions/11534098/combine-two-form-input-values-with-jquery)
+- [How do I get my textarea to preserve newlines when using jQuery and JSON?](http://stackoverflow.com/questions/3173166/how-do-i-get-my-textarea-to-preserve-newlines-when-using-jquery-and-json)
+- [Append text from one field to another?](http://stackoverflow.com/questions/13723109/append-text-from-one-field-to-another)
 - []()
 - []()
 
