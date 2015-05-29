@@ -27,6 +27,19 @@ BigCommerce Contact Form
 
 
 ##Resources
+- [Web Pages: Creating a Contact Form](https://support.bigcommerce.com/articles/Public/Web-Pages#contact-form)
+- [Editing Form Fields](https://support.bigcommerce.com/articles/Public/Editing-Form-Fields)
+- [Display Settings: CAPTCHA](https://support.bigcommerce.com/articles/Public/Display-Settings#display)
+- [jQuery AJAX submit form](http://stackoverflow.com/questions/1960240/jquery-ajax-submit-form)
+- [jQuery Form Plugin](http://jquery.malsup.com/form/)
+- [submitting html form via jquery ajax() and serialize()](http://stackoverflow.com/questions/22961621/submitting-html-form-via-jquery-ajax-and-serialize)
+- [jQuery AJAX form data serialize using PHP](http://stackoverflow.com/questions/24007780/jquery-ajax-form-data-serialize-using-php)
+- [Extracting Ajax return data in jQuery](http://stackoverflow.com/questions/400197/extracting-ajax-return-data-in-jquery)
+- [jQuery .find() on data from .ajax() call is returning “object Object” instead of div](http://stackoverflow.com/questions/3300332/jquery-find-on-data-from-ajax-call-is-returning-object-object-instead)
+- [Extract part of HTML document in jQuery](http://stackoverflow.com/questions/2137811/extract-part-of-html-document-in-jquery)
+- [Refresh image with a new one at the same url](http://stackoverflow.com/questions/1077041/refresh-image-with-a-new-one-at-the-same-url)
+- [jQuery: .replaceWith()](http://api.jquery.com/replacewith/)
+- [Using jQuery replaceWith to replace content of DIV only working first time](http://stackoverflow.com/questions/4995185/using-jquery-replacewith-to-replace-content-of-div-only-working-first-time)
 - []()
 
 
