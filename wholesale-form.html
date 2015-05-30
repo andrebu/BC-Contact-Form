@@ -913,15 +913,21 @@
 		formSubmissionAction();
     });
 	function addressHover() {
-		var addressInp = $('.address-input, .country-line .selector');
+		var addressHovers = $('.address-input, .country-line .selector');
+		var addressBorders = $('.address-input, .country-line .selector span');
 		var selectorSpan = $('.country-line .selector span');
 		selectorSpan.addClass('address-input');
-		addressInp.on({
+		addressHovers.on({
 			mouseenter: function() {
-				addressInp.not(this).addClass('gray-border');
+				if ($(this) == $('.country-line .selector')) {
+					console.log('Is this working???');
+					addressHovers.not(this).addClass('gray-border');
+				} else {
+					addressBorders.not(this).addClass('gray-border');
+				}
 			},
 			mouseleave: function() {
-				addressInp.removeClass('gray-border')
+				addressBorders.removeClass('gray-border')
 			}
 		});
 	}
