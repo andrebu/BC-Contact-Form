@@ -104,25 +104,25 @@
 			    </div>
 				<div class="form-right">
 				    <div class="input-line">
-					    <input type="text" name="address-line1" id="address-line1" placeholder="enter your store address - line 1">
+					    <input type="text" name="address-line1" id="address-line1" class="address-input" placeholder="enter your store address - line 1">
 				    </div>
 				    <div class="input-line">
-				    	<input type="text" name="address-line2" id="address-line2" placeholder="enter your store address - line 2">
+				    	<input type="text" name="address-line2" id="address-line2" class="address-input" placeholder="enter your store address - line 2">
 				    </div>
 				    <div class="input-line">
 				        <div class="line-left city-line">
-				            <input type="text" name="address-city" id="address-city" placeholder="enter city">
+				            <input type="text" name="address-city" id="address-city" class="address-input" placeholder="enter city">
 				        </div>
 				        <div class="line-right state-line">
-				            <input type="text" name="address-state" id="address-state" placeholder="enter state">
+				            <input type="text" name="address-state" id="address-state" class="address-input" placeholder="enter state">
 				        </div>
 				    </div>
 				    <div class="input-line">
 				        <div class="line-left zip-line">
-				        	<input type="text" name="address-zip" id="address-zip" placeholder="enter zip code/postal code">
+				        	<input type="text" name="address-zip" id="address-zip" class="address-input" placeholder="enter zip code/postal code">
 				        </div>
 				        <div class="line-right country-line">
-				            <select class="form-dropdown" name="address-country" id="address-country">
+				            <select name="address-country" id="address-country" class="form-dropdown" >
 				                <option value="Select Country" selected>
 				                    Select Country
 				                </option>
@@ -909,8 +909,32 @@
 <script type="text/javascript">
 //<![CDATA[
 	$(document).ready(function(){
+		addressHover();
 		formSubmissionAction();
     });
+	function addressHover() {
+		var addressInp = $('.address-input');
+		var allAddressHovers = $('.address-input, .country-line .selector, .country-line .selector span, .country-line .selector select');
+		var selectorCrap = $('.country-line .selector, .country-line .selector span, .country-line .selector select')
+		var selectorSpan = $('.country-line .selector span');
+		selectorSpan.addClass('address-input');
+		addressInp.on({
+			mouseenter: function() {
+				if ($(this) == $('.country-line')) {
+					$(this).addClass('horribleBCcode');
+					console.log('Is this working???');
+					$('.address-input').addClass('gray-border');
+				} else {
+					$('.address-input').not(this).addClass('gray-border');
+				}
+			},
+			mouseleave: function() {
+				$('.address-input').removeClass('gray-border')
+			},
+			click: function() {
+			}
+		});
+	}
 	var $form = $('#wholesale-form');
 	var $formButton = $('#wholesale-form button[type="submit"]');
 	var $formResponse = $('#form-response');
