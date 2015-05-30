@@ -204,6 +204,17 @@
 #wholesale-form-container form .form-row:hover div.selector span {
     border-color: #6ADA78;
 }
+#wholesale-form-container form .form-row:not(.disabled-field):hover input.gray-border,
+#wholesale-form-container form .form-row:not(.disabled-field):hover textarea.gray-border,
+#wholesale-form-container form .form-row:hover div.selector span.gray-border {
+    border-color: #D9F5DD;
+}
+#wholesale-form-container form .form-row:hover div.selector span.gray-border:before {
+	background: #D9F5DD;
+}
+#wholesale-form-container form .form-row:hover div.selector.hover span.gray-border {
+    border-color: #6ADA78;
+}
 #wholesale-form-container form .form-row:hover div.selector:before {
 	background: #6ADA78;
 }
@@ -212,14 +223,14 @@
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:focus {
-    border-color: #6ADA78;
+    border-color: #6ADA78 !important;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(106, 218, 120,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(106, 218, 120,.6);
 }
 #wholesale-form-container form .form-row:not(.disabled-field) input:not([disabled]):invalid:focus,
 #wholesale-form-container form .form-row:not(.disabled-field) textarea:not([disabled]):invalid:focus {
-	border-color: #F47D77;
-	border-color: #F9BDBA;
+	border-color: #F47D77 !important;
+	border-color: #F9BDBA !important;
 	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249, 189, 186,.6);
 	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(249, 189, 186,.6);
 }
