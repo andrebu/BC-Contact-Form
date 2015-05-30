@@ -913,25 +913,15 @@
 		formSubmissionAction();
     });
 	function addressHover() {
-		var addressInp = $('.address-input');
-		var allAddressHovers = $('.address-input, .country-line .selector, .country-line .selector span, .country-line .selector select');
-		var selectorCrap = $('.country-line .selector, .country-line .selector span, .country-line .selector select')
+		var addressInp = $('.address-input, .country-line .selector');
 		var selectorSpan = $('.country-line .selector span');
 		selectorSpan.addClass('address-input');
 		addressInp.on({
 			mouseenter: function() {
-				if ($(this) == $('.country-line')) {
-					$(this).addClass('horribleBCcode');
-					console.log('Is this working???');
-					$('.address-input').addClass('gray-border');
-				} else {
-					$('.address-input').not(this).addClass('gray-border');
-				}
+				addressInp.not(this).addClass('gray-border');
 			},
 			mouseleave: function() {
-				$('.address-input').removeClass('gray-border')
-			},
-			click: function() {
+				addressInp.removeClass('gray-border')
 			}
 		});
 	}
