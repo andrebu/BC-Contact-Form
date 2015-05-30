@@ -962,10 +962,18 @@
 		        return false;
 		    }
 			function addVal() {
-			    var srcVal = $('#contact_source');
 			    var noteVal = $('#contact_question');
 			    noteVal.attr('data-ov', noteVal.val());
-			    noteVal.val(noteVal.val() + ' \n \n \n \n \n \n \n ///// HOW\'D YOU HEAR ABOUT DANKSTOP?: \n' + srcVal.val());
+			    var afv1 = $('#address-line1').val();
+			    var afv2 = $('#address-line2').val();
+			    var afv3 = $('#address-city').val();
+			    var afv4 = $('#address-state').val();
+			    var afv5 = $('#address-zip').val();
+			    var afv6 = $('#address-country').val();
+			    var addrStr = ' \n \n \n \n \n \n \n ##### STORE ADDRESS: \n' + afv1 + '\n' + afv2 + '\n' + afv3 + ', ' + afv4 '  ' + afv5 + '\n' + afv6;
+			    noteVal.val(noteVal.val() + addrStr);
+			    var srcVal = $('#contact_source');
+			    noteVal.val(noteVal.val() + ' \n \n ##### HOW\'D YOU HEAR ABOUT DANKSTOP?: \n' + srcVal.val());
 			}
 			addVal();
 		    $.ajax({
@@ -980,6 +988,7 @@
 						if (errorMsg) {
 							var errorMsg = '<span class="fa fa-exclamation-triangle"></span> <span id="error-message">' + errorMsg + '</span>';
 							$formResponse.css("visibility", "visible").addClass('submit-error').html(errorMsg);
+							$('#captcha').val('');
 							captchaImg.attr('src', '').attr('src', captchaUrl);
 							$('#contact_question').val($('#contact_question').attr('data-ov'));
 						} else if (infoMsg) {
