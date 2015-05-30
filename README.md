@@ -49,6 +49,8 @@ BigCommerce Contact Form
 - [Append text from one field to another?](http://stackoverflow.com/questions/13723109/append-text-from-one-field-to-another)
 - [How to tell if a string contains a certain character in javascript?](http://stackoverflow.com/questions/4444477/how-to-tell-if-a-string-contains-a-certain-character-in-javascript)
 - [HTML <input> placeholder Attribute](http://www.w3schools.com/tags/att_input_placeholder.asp)
+- [Change an input's HTML5 placeholder color with CSS](http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css)
+- []()
 - []()
 - []()
 
