@@ -91,10 +91,54 @@
 	font-size: 16px;
 }
 #wholesale-form-container .form-left {
-    flex: 7;
+	-webkit-box-flex: 7; 
+	-moz-box-flex: 7; 
+	-webkit-flex: 7; 
+	-ms-flex: 7; 
+	flex: 7;
 }
 #wholesale-form-container .form-right {
+	-webkit-box-flex: 13; 
+	-moz-box-flex: 13; 
+	-webkit-flex: 13; 
+	-ms-flex: 13; 
     flex: 13;
+}
+#wholesale-form-container .form-row .input-line + .input-line {
+    margin-top: 4px;
+}
+#wholesale-form-container .form-row .input-line .line-left{
+	margin: 0 4px 0 0;
+}
+#wholesale-form-container .form-row .input-line {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-moz-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-moz-box-direction: normal;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+}
+#wholesale-form-container .form-row .input-line .line-left, 
+#wholesale-form-container .form-row .input-line .line-right {
+	-webkit-box-flex: 1; 
+	-moz-box-flex: 1; 
+	-webkit-flex: 1; 
+	-ms-flex: 1; 
+	flex:1;
+}
+#wholesale-form-container .form-row .input-line .line-left.city-line, 
+#wholesale-form-container .form-row .input-line .line-right.country-line {
+	-webkit-box-flex: 2; 
+	-moz-box-flex: 2; 
+	-webkit-flex: 2; 
+	-ms-flex: 2; 
+	flex:2;
 }
 #wholesale-form-container form input,
 #wholesale-form-container form textarea,
