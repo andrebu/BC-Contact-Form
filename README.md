@@ -48,7 +48,7 @@ BigCommerce Contact Form
 - [How do I get my textarea to preserve newlines when using jQuery and JSON?](http://stackoverflow.com/questions/3173166/how-do-i-get-my-textarea-to-preserve-newlines-when-using-jquery-and-json)
 - [Append text from one field to another?](http://stackoverflow.com/questions/13723109/append-text-from-one-field-to-another)
 - [How to tell if a string contains a certain character in javascript?](http://stackoverflow.com/questions/4444477/how-to-tell-if-a-string-contains-a-certain-character-in-javascript)
-- []()
+- [HTML <input> placeholder Attribute](http://www.w3schools.com/tags/att_input_placeholder.asp)
 - []()
 - []()
 
