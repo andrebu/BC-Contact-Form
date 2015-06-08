@@ -56,7 +56,7 @@ BigCommerce Contact Form
 - [How to remove an element slowly with jQuery?](http://stackoverflow.com/questions/1807187/how-to-remove-an-element-slowly-with-jquery)
 - [How to remove everything within a DIV except for one element?](http://stackoverflow.com/questions/8737022/how-to-remove-everything-within-a-div-except-for-one-element)
 - [jquery - Select all elements after a certain element](http://stackoverflow.com/questions/5518950/jquery-select-all-elements-after-a-certain-element)
-- []()
+- [Append an element with fade in effect [jQuery]](http://stackoverflow.com/questions/4687579/append-an-element-with-fade-in-effect-jquery)
 - []()
 - []()
 
