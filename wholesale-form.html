@@ -913,8 +913,10 @@
 <script type="text/javascript">
 //<![CDATA[
 	$(document).ready(function(){
-		addressHover();
 		formSubmissionAction();
+    });
+	$(window).load(function(){
+		addressHover();
     });
 	function addressHover() {
 		var addressHovers = $('.address-input, .country-line .selector');
@@ -935,13 +937,13 @@
 			}
 		});
 	}
+
 	var $form = $('#wholesale-form');
 	var $formButton = $('#wholesale-form button[type="submit"]');
 	var $formResponse = $('#form-response');
 	var formUrl = 'http://dankstop.com/pages.php?action=sendContactForm';
 	var captchaImg = $('#captcha-field img');
 	var captchaUrl = 'http://dankstop.com/captcha.php?1557';
-
 	function formSubmissionAction() {
 		$('#ContactForm').remove();
 		$form.submit(function() {
