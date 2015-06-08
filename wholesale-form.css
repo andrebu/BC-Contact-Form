@@ -243,7 +243,9 @@
 #wholesale-form-container .form-row.response {
 	min-height: 20px;
 	visibility: hidden;
+	text-align: center;
 }
+#wholesale-form-container .submit-success,
 #wholesale-form-container #form-response {
 	color: #39B54A;
 }
@@ -258,4 +260,10 @@
 	height: 100%;
 	text-align: center;
 	margin: 0 auto;
+}
+#wholesale-form-container #form-response .fa {
+	font-size: 90px;
+}
+#wholesale-form-container #form-response #info-message {
+	font-size: 15px;
 }
