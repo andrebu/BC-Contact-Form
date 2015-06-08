@@ -1001,15 +1001,20 @@
 							var $wholeFieldset = $('#wholesale-form-container fieldset');
 							var $wholeLegend = $('#wholesale-form-container fieldset legend');
 							var submitSuccess = '<div class="submit-success">Congratulations! <br>' +
-												' We have received your completed form and will be in contact with you shortly.</div>';
-							$wholeFieldset.css('height', $wholeFieldset.height());
-							$wholeLegend.nextAll().animate(1300, function(){
+												'We have received your completed form and will be in contact with you shortly.</div>';
+							//$wholeFieldset.css('height', $wholeFieldset.height());
+							$wholeLegend.nextAll(':not(".form-row.response")').slideUp(1300, function(){
 							    $(this).css('visibility','hidden');
 							});
 							//$wholeLegend.nextAll().remove(); 
 							//$wholeFieldset.append(submitSuccess).fadeIn(1300);
-							var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
-							$formResponse.css("visibility", "visible").removeClass('submit-error').html(infoMsg);
+							//var infoMsg = '<span class="fa fa-check-circle-o"></span> <span id="info-message">' + infoMsg + '</span>';
+							var successResponse = '<span class="fa fa-check-circle-o"></span><br><span id="info-message">'+ 
+												'We\'ve received your application. A representative will contact you within 2 business days.</span>';
+							$formResponse.css("visibility", "visible").removeClass('submit-error').html(successResponse);
+							$('html,body').animate({
+								scrollTop: $('#wholesale-form-container').offset().top},
+								'slow');
 						}
 					}
 				});
